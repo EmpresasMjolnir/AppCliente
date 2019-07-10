@@ -1,0 +1,10 @@
+{
+  "cadastro": [
+    {
+      "nome": "Juliana",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "id": 1
+    }
+  ]
+}

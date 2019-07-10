@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Vitrine
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card" *ngFor="let p of produtos">
+        <ion-img src="{{p.img}}"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{p.nome}}</ion-card-title>
+        <ion-card-subtitle>Categoria: {{p.categoria}}</ion-card-subtitle>
+        <ion-card-subtitle>{{p.preco}}</ion-card-subtitle>
+        <ion-card-subtitle>Ponto de venda: {{p.filial}}</ion-card-subtitle>
+        <ion-card-subtitle>Tipo de roupa: {{p.generoProduto}}</ion-card-subtitle>
+
+
+
+      </ion-card-header>
+    </ion-card>
+</ion-content>
