@@ -4,25 +4,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!--<ng-template #showLogin>-->
+<ion-content >
+  <form #fc="ngForm" (ngSubmit)="onSubmit(fc)">
   <ion-card>
     <ion-list>
   
       <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input [(ngModel)]="form.email" type="text" value=""></ion-input>
+        <ion-label>Usuário</ion-label>
+        <ion-input [(ngModel)]="email" type="email" name="email" required></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-label>Password</ion-label>
-        <ion-input [(ngModel)]="form.senha" type="password" value=""></ion-input>
+        <ion-label>Senha</ion-label>
+        <ion-input [(ngModel)]="senha"  type="password" name="senha" required></ion-input>
       </ion-item>
       
-       
-    
     </ion-list>
-    <ion-button expand="block" color="success" (click)="efetuarLogin()" size="small">sing In</ion-button> 
-    </ion-card>
-     
-    <ion-button color="light" expand="block" routerLink="/cadastro">É novo aqui? Crie sua conta.</ion-button>
+    <ion-button expand="block" color="success" type="submit" [disabled]="fc.invalid" size="small">Logar</ion-button>
+   
+    </ion-card> 
+    <ion-button color="primary" expand="block" fill="outline" (click)="loginGoogle()">Entrar com conta Google</ion-button>
+
+    <ion-button color="medium" expand="block" fill="outline" routerLink="/cadastro">É novo aqui? Crie sua conta.</ion-button>
+
+  </form> 
 </ion-content>
+<!--</ng-template>-->
+
