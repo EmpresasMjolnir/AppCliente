@@ -1,5 +1,7 @@
 {
   "name": "lojaClientApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

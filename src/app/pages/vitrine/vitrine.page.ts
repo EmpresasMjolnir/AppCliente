@@ -13,20 +13,20 @@ export class VitrinePage implements OnInit {
   constructor(private prov: Dados2Service) { }
 
   ngOnInit() {
-    this.produto();
+   // this.produto();
   }
-  produto(){
-    this.prov.getVitrine().subscribe(
+  //produto(){
+  //  this.prov.getVitrine().subscribe(
       
-      data=>{ 
-      let resposta = (data as any)._body;
-      resposta = JSON.parse(resposta);
-      this.produtos = resposta;
-    },
-      error=>{
-        console.log(error);
-      }
-    ).add();
+  //    data=>{ 
+  //    let resposta = (data as any)._body;
+  //    resposta = JSON.parse(resposta);
+  //    this.produtos = resposta;
+ //   },
+   //   error=>{
+    //    console.log(error);
+  //    }
+   // ).add();
   }
 
-}
+//}
