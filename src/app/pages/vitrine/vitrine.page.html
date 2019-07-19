@@ -10,6 +10,12 @@
 </ion-header>
 
 <ion-content>
+    <ion-searchbar showcancelbutton="" (ioninput)="filterList($event)"></ion-searchbar>
+    <!-- <ion-list>
+        <ion-item *ngfor="let item of goalList">
+        <ion-label>{{ item.goalName }}</ion-label>
+        </ion-item>
+        </ion-list> -->
     <ion-card class="welcome-card" *ngFor="let p of produtos">
         <ion-img src="{{p.img}}"></ion-img>
       <ion-card-header>

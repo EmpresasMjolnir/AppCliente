@@ -5,16 +5,15 @@
 export const environment = {
   production: false,
   firebaseConfig:{
-    apiKey: "AIzaSyC_gabVYhIDEyGyl9cootY0A5m5SVLL3tg",
-    authDomain: "facilita-cliente.firebaseapp.com",
-    databaseURL: "https://facilita-cliente.firebaseio.com",
-    projectId: "facilita-cliente",
-    storageBucket: "facilita-cliente.appspot.com",
-    messagingSenderId: "55065373696",
-    appId: "1:55065373696:web:4f4a234cd7f6ba0a"
+    apiKey: "AIzaSyBH5nmoQEC8TK67ckuDGsCmwHsgZksxc6s",
+    authDomain: "facilita-app-1f449.firebaseapp.com",
+    databaseURL: "https://facilita-app-1f449.firebaseio.com",
+    projectId: "facilita-app-1f449",
+    storageBucket: "facilita-app-1f449.appspot.com",
+    messagingSenderId: "137501841627",
+    appId: "1:137501841627:web:d947c03c32e7cb84"
   }
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
