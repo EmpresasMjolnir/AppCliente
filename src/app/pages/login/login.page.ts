@@ -78,7 +78,7 @@ export class LoginPage implements OnInit {
       this.loginGoogleMobile();
 
     if (this.afAuth.user) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
     }
 
   }

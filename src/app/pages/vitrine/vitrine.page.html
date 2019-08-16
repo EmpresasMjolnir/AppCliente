@@ -11,22 +11,20 @@
 
 <ion-content>
     <ion-searchbar showcancelbutton="" (ioninput)="filterList($event)"></ion-searchbar>
-    <!-- <ion-list>
-        <ion-item *ngfor="let item of goalList">
-        <ion-label>{{ item.goalName }}</ion-label>
-        </ion-item>
-        </ion-list> -->
-    <ion-card class="welcome-card" *ngFor="let p of produtos">
-        <ion-img src="{{p.img}}"></ion-img>
-      <ion-card-header>
-        <ion-card-title>{{p.nome}}</ion-card-title>
-        <ion-card-subtitle>Categoria: {{p.categoria}}</ion-card-subtitle>
-        <ion-card-subtitle>{{p.preco}}</ion-card-subtitle>
-        <ion-card-subtitle>Ponto de venda: {{p.filial}}</ion-card-subtitle>
-        <ion-card-subtitle>Tipo de roupa: {{p.generoProduto}}</ion-card-subtitle>
+    <ion-list *ngIf="produto$ | async as produto">
+      <ion-item *ngFor="let produto of produto">
+        <ion-card class="welcome-card">
+          <ion-card-header>
+          <ion-img src="{{produto.img}}"></ion-img>
+          </ion-card-header>
+          <ion-card-header>
+            <ion-card-subtitle>{{produto.nome}}</ion-card-subtitle>
+            <p>Descrição: {{produto.descricao}}</p>
+            <p>Preço: {{produto.preco}}</p>
+            <p>Endereço: {{produto.filial}}</p>
+          </ion-card-header> 
+        </ion-card>
 
-
-
-      </ion-card-header>
-    </ion-card>
+      </ion-item>
+   </ion-list>
 </ion-content>
